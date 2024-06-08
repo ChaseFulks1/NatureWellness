@@ -1,0 +1,112 @@
+/* General Style */
+body{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #21242c;
+    background-image: url(images/background_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header{
+    background-image: url(images/header_bck.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 15px 0;
+    color: #faf9f0;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #456940;
+    border-bottom: 3px solid #4d774e;
+}
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+/* Navigation Links */
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav a{
+    color: #faf9f0;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #f7e98d;
+    border-bottom: 2px solid #f7e98d;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+nav li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Gallery Styling */
+.gallery{
+    margin-bottom: 30px;
+    color: #faf9f0;
+    text-decoration: 2px solid underline #faf9f0;
+}
+
+.image-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 15px;
+}
+
+.image-grid img{
+    /* fadeIn effect pt1 */
+    opacity: 0;
+    transition: opacity 1s ease;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5%;
+    border: 2px solid #faf9f0;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    /* hover zoom effect */
+    animation: fadeIn 1s ease forwards;
+}
+.image-grid img.fade-in{
+    opacity: 1;
+}
+.image-grid img:hover{
+    /* image slightly enlarges on hover */
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+#backToTop{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: #4d774e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+#backToTop:hover{
+    opacity: 1;
+}
+/* Footer Styling */
+footer{
+    text-align: center;
+    margin-top: 20px;
+    color: #4d774e;
+}
+
+/* Responsive Design */
+@media (max-width: 760px) {
+    nav ul{
+        text-align: center;
+    }
+}
